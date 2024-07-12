@@ -1,0 +1,903 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  
+  body {
+    height: 100%;
+    font-family: 'Raleway', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .header {
+    background: url('./image/pexels-sebastians-750225.jpg') no-repeat center center/cover;
+    padding: 50px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    align-items: center;
+    width: 100%;
+    padding: 50px 50px;
+    background-color: transparent;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .nav-links ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links ul li a:hover {
+    color: #d82a4e;
+  }
+  
+  .login-btn {
+    padding: 10px 20px;
+    background-color: #d82a4e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  
+  .login-btn:hover {
+    background-color: #a02137;
+  }
+  
+  .hero {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    margin-top: 1px;
+    border-radius: 10px;
+  }
+  
+  .hero h1,
+  .hero p {
+    color: rgb(255, 255, 255);
+  }
+  
+  .hero h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    margin-bottom: 30px;
+  }
+  
+  .hero p {
+    font-size: 14.1px;
+    color: #ffffff;
+    line-height: 2.2;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding-bottom: 60px;
+  }
+  
+  .signup-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+  
+  .signup-form input[type='text'],
+  .signup-form input[type='email'] {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 250px; /* Set a fixed width */
+  }
+  
+  .signup-btn {
+    padding: 15px 30px; /* Increase padding for a larger button */
+    background-color: #d82a4e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+  }
+  
+  .signup-btn:hover {
+    background-color: #a02137;
+  }
+  
+  .Categories {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    margin-top: 1px;
+    border-radius: 10px;
+  }
+  
+  .Categories h2,
+  .Categories p {
+    color: #878181;
+  }
+  
+  .Categories h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    margin-bottom: 30px;
+  }
+  
+  .Categories p {
+    font-size: 14.1px;
+    color: #878181;
+    line-height: 2.2;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+  }
+  
+  .categoriesBoxs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .Cbox {
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .Cbox:hover {
+    background-color: #d82a4e;
+  }
+  
+  .Cat-info {
+    margin: 20px 5px 0px 20px;
+    text-align: left;
+  }
+  
+  .Cat-text {
+    margin-bottom: 20px;
+  }
+  
+  .Cat-text h5 {
+    font-size: 23px;
+    font-weight: normal;
+    margin-bottom: 15px;
+  }
+  
+  .Cat-text p {
+    color: #777;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+  }
+  
+  .Cat-text span {
+    display: block;
+    color: #d82a4e;
+    font-size: 19px;
+    transition: color 0.3s;
+  }
+  
+  .Cimage img {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .Cbox:hover .Cat-text h5,
+  .Cbox:hover .Cat-text p,
+  .Cbox:hover .Cat-text span {
+    color: #fff;
+  }
+  
+  .Section2 {
+    display: flex;
+    width: 100%;
+    margin: 3px;
+    padding: 55px;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .backg {
+    background-color: #d82a4e;
+    padding: 57px;
+    margin: 57px 100px;
+  }
+  
+  .searchtxt {
+    text-align: center;
+    font-size: 23px;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .sform {
+    background-color: #d4dee1;
+    display: flex;
+    padding: 60px 45px;
+    justify-content: center;
+    border: none;
+    border-radius: 4px;
+    gap: 10px;
+  }
+  
+  .scourse {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 65px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    margin-left: 10px;
+    width: 30%;
+    padding: 20px 25px;
+
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .courses {
+    margin: 50px 0;
+    padding: 50px;
+  }
+  
+  .courses .text-courses {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  
+  .courses .text-courses h1 {
+    font-size: 45px;
+    font-weight: normal;
+    padding: 20px;
+  }
+  
+  .courses .text-courses p {
+    color: #777;
+    padding: 0 115px;
+  }
+  
+  .courses .links {
+    margin: 22px 137px;
+  }
+  
+  .courses .links ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .courses .links a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 19px;
+    display: block;
+    background-color: white;
+  }
+  
+  .courses .boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-flow: row;
+    gap: 15px;
+  
+    padding: 10px;
+  }
+  .courses .boxs .box {
+    position: relative;
+    background-color: #e0e4e8b7;
+  }
+  
+  .courses .boxs .image .price {
+    position: absolute;
+    top: 10px;
+    background: #d82a4e;
+    padding: 15px 20px;
+    color: white;
+    font-size: 15px;
+    left: 17px;
+  }
+  
+  .courses .box .course-info {
+    margin: 20px 0 0px 20px;
+  }
+  
+  .courses .box .course-info .text-box {
+    margin-bottom: 20px;
+  }
+  
+  .courses .box .course-info .text-box h5 {
+    font-size: 23px;
+    font-weight: normal;
+    margin-bottom: 15px;
+  }
+  
+  .courses .box .course-info .text-box p {
+    color: #777;
+    margin-bottom: 20px;
+  }
+  
+  .courses .box .course-info .text-box span {
+    display: block;
+    color: #d82a4e;
+    font-size: 19px;
+  }
+  
+  .courses .boxs .box .image img {
+    max-width: 100%;
+  }
+  
+  .courses .boxs .author img {
+    max-width: 50px;
+    border-radius: 50%;
+    max-height: 50px;
+    margin-right: 15px;
+  }
+  
+  .courses .boxs .author {
+    display: flex;
+    border-top: 1px solid #d4dee1;
+    padding: 15px 5px;
+  }
+  
+  .courses .boxs .author p {
+    text-align: center;
+    color: #777;
+    padding: 15px 0px;
+  }
+  
+  .courses .boxs .author span {
+    color: red;
+  }
+  
+  .Tsignup-section {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: row-reverse;
+  }
+  
+  .Tsignup-form {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #d82a4e;
+    flex-direction: column;
+  }
+  
+  .Tsignup-form h2 {
+    margin-bottom: 20px;
+    font-size: 45px;
+    margin-right: 80px;
+    max-width: 500px;
+    color: #fff;
+  }
+  
+  .Tsignup-form p {
+    margin-bottom: 40px;
+    /* margin-left: 45px; */
+    /* padding: 0px 0px 0px 40px; */
+    color: #ffffff;
+  }
+  
+  .Tform-container {
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(171, 171, 171, 0.1);
+    border: none;
+   
+    height: 55vh;
+  }
+  
+  .Tform-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .Tform-container input[type="text"],
+  .Tform-container input[type="email"] {
+    width: 100%;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    border: none #aca6a6;
+    border-radius: 4px;
+    background-color: rgb(238, 246, 255);
+    font-size: 20px;
+  }
+  
+  .Tform-container button {
+    width: 50%;
+    padding: 10px;
+    margin: 10px 10px;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .Tform-container button:hover {
+    background-color: #d82a4e;
+  }
+  
+  .CourseUpload {
+    background-color: #3a3939;
+    max-width: 140px;
+  }
+  
+  .Search-course {
+    height: 50px;
+    background-color: #d82a4e;
+  }
+  
+  .Tsignup-image {
+    flex: 1;
+    background-image: url('image/signup-bg.jpg.webp');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 1200px) {
+    .container {
+      padding: 0 20px;
+    }
+  
+    .nav-links ul {
+      gap: 30px;
+    }
+  
+    .hero h1 {
+      font-size: 2.5em;
+    }
+  
+    .hero p {
+      font-size: 12px;
+    }
+  
+    .signup-form input[type='text'],
+    .signup-form input[type='email'] {
+      width: 200px;
+    }
+  
+    .signup-btn {
+      padding: 10px 20px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .header{
+      width: 100%;
+    }
+    .navbar {
+      padding: 30px 30px;
+    }
+  
+    .nav-links ul {
+      gap: 20px;
+    }
+  
+    .categoriesBoxs {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .Section2 {
+      padding: 40px;
+    }
+  
+    .courses .text-courses p {
+      padding: 0 60px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header{
+      width: 100%;
+    }
+    .navbar {
+      grid-template-columns: 1fr;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .nav-links ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .login-btn {
+      margin-top: 10px;
+    }
+  
+    .signup-form {
+      flex-direction: column;
+    }
+  
+    .signup-form input[type='text'],
+    .signup-form input[type='email'] {
+      width: 100%;
+    }
+  
+    .categoriesBoxs {
+      grid-template-columns: 1fr;
+    }
+  
+    .Section2 {
+      flex-direction: column;
+  }
+
+  .sform {
+      flex-direction: column;
+      padding: 30px;
+  }
+
+  .scourse {
+      width: 100%;
+      margin-left: 0;
+  }
+  .courses {
+    padding: 20px;
+  }
+
+  .courses .text-courses h1 {
+    font-size: 35px;
+  }
+
+  .courses .text-courses p {
+    padding: 0 20px;
+  }
+
+  .courses .links {
+    margin: 22px 20px;
+  }
+
+  .courses .links ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .courses .links a {
+    font-size: 17px;
+  }
+
+  .courses .boxs {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  .Tsignup-image {
+    display: none;
+  }
+  .Tsignup-section {
+    flex-direction: column;
+    align-items: center;
+}
+
+.Tsignup-form {
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    width: 100%; 
+    max-width: 400px; 
+    height: auto; 
+}
+  
+  @media (max-width: 480px) {
+    .header {
+      /* padding: 20px 0; */
+    width: 100%;
+    }
+  
+    .hero h1 {
+      font-size: 2em;
+    }
+  
+    .hero p {
+      font-size: 10px;
+    }
+  
+    .signup-form {
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+  
+    .signup-form input[type='text'],
+    .signup-form input[type='email'] {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .signup-btn {
+      padding: 10px 20px;
+    }
+  
+    .courses .text-courses h1 {
+      font-size: 28px;
+    }
+
+    .courses .text-courses p {
+      padding: 0 10px;
+    }
+
+    .courses .links ul {
+      gap: 3px;
+    }
+
+    .courses .links a {
+      font-size: 15px;
+      padding: 8px;
+    }
+
+    .courses .boxs {
+      grid-template-columns: 1fr;
+    }
+    .Tsignup-form {
+      padding: 10px; 
+  }
+  }}
+
+  .join-community-container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 79px 22px 38px 20px;
+}
+
+/* Title styling */
+.join-community-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Text styling */
+.join-community-text {
+    font-size: 1em;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* Button styling */
+.join-community-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #d82a4e;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.join-community-btn:hover {
+    background-color: #a02137;
+}
+
+
+/* Footer styling */
+.footer {
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #d82a4e ;
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.footer-section {
+  max-width: 200px;
+}
+
+.footer-title {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #696565;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.footer-item {
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.footer-icon {
+  color: #d82a4e;
+  margin-right: 10px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter-input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.newsletter-btn {
+  padding: 10px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #d82a4e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-btn:hover {
+  background-color: #a02137;
+}
+
+.newsletter-text {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .footer-section {
+      max-width: 100%;
+      margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .join-community-title {
+      font-size: 2em;
+  }
+  
+  .join-community-text {
+      font-size: 0.9em;
+  }
+  
+  .join-community-btn {
+      padding: 8px 16px;
+      font-size: 0.9em;
+  }
+  
+  .footer-title {
+      font-size: 1em;
+  }
+  
+  .footer-item {
+      font-size: 0.9em;
+  }
+  
+  .newsletter-input, .newsletter-btn {
+      font-size: 0.9em;
+  }
+}
+
+
+
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #d82a4e;
+    margin: 15% auto;
+    padding: 20px;
+border: none;   
+ width: 80%;
+    max-width: 500px;
+    text-align: center;
+    height: 120px;
+    border-radius: 8px;
+}
+#loginName{
+    padding:10px;
+    border: none;
+    border-radius: 8px;
+}
+#loginEmail{
+    padding:10px;
+    border: none;
+    border-radius: 8px;
+}
+#loginSubmitBtn{
+    padding:10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
